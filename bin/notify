@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'google_drive_to_slack'
+
+options = {
+  google_client_id: ENV['GOOGLE_CLIENT_ID'],
+  google_client_secret: ENV['GOOGLE_CLIENT_SECRET'],
+  google_refresh_token: ENV['GOOGLE_REFRESH_TOKEN'],
+  slack_webhook_url: ENV['SLACK_WEBHOOK_URL']
+}
+options[:slack_username]   = ENV['SLACK_USERNAME']        if ENV['SLACK_USERNAME']
+options[:slack_icon_url]   = ENV['SLACK_ICON_URL']        if ENV['SLACK_ICON_URL']
+options[:interval_minutes] = ENV['INTERVAL_MINUTES'].to_i if ENV['INTERVAL_MINUTES']
+
+GoogleDriveToSlack::Runner.run(options)
