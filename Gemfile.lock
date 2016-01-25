@@ -79,6 +79,7 @@ GEM
       pry (~> 0.9)
       yard (~> 0.8)
     rack (1.6.4)
+    rake (10.4.2)
     retriable (1.4.1)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -114,6 +115,7 @@ DEPENDENCIES
   pry
   pry-byebug
   pry-doc
+  rake
   rspec
   slack-notifier (~> 1.5)
 
