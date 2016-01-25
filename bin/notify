@@ -10,6 +10,6 @@ options = {
 }
 options[:slack_username] = ENV['SLACK_USERNAME'] if ENV['SLACK_USERNAME']
 options[:slack_icon_url] = ENV['SLACK_ICON_URL'] if ENV['SLACK_ICON_URL']
-options[:interval_minutes] = ENV['INTERVAL_MINUTES'].to_i if ENV['INTERVAL_MINUTES']
+options[:time_window_minutes] = ENV['TIME_WINDOW_MINUTES'].to_i if ENV['TIME_WINDOW_MINUTES']
 
 GoogleDriveToSlack::Runner.run(options)

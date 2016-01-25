@@ -16,7 +16,7 @@ module GoogleDriveToSlack
         slack_webhook_url:,
         slack_username: '',
         slack_icon_url: '',
-        interval_minutes: 60,
+        time_window_minutes: 60,
         logger_out: STDOUT
       )
         logger = Logger.new(logger_out)
@@ -27,7 +27,7 @@ module GoogleDriveToSlack
           refresh_token: google_refresh_token
         )
 
-        files = google_drive.modified_files(since: interval_minutes.minutes.ago)
+        files = google_drive.modified_files(since: time_window_minutes.minutes.ago)
         logger.debug(files)
         return if files.size <= 0
 
