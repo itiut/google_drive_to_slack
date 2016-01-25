@@ -1,5 +1,6 @@
 GoogleDriveToSlack
 ====
+[![Build Status](https://travis-ci.org/itiut/google_drive_to_slack.svg?branch=master)](https://travis-ci.org/itiut/google_drive_to_slack)
 
 Notify file updates in Google Drive to Slack.  
 

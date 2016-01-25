@@ -8,5 +8,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry'
+  gem 'rake'
   gem 'rspec'
 end
