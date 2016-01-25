@@ -4,6 +4,8 @@ GoogleDriveToSlack
 
 Notify file updates in Google Drive to Slack.  
 
+![notification](https://raw.githubusercontent.com/itiut/google_drive_to_slack/master/notification.png)
+
 Usage
 ----
 Run `bin/notify` periodically by cron or something.
